@@ -2,9 +2,14 @@
     <ul >
         @for ( person of persons; track person.name ) {
             <li >
-                <button type= " button " >
+                <button type= "button" (click) = "onSelect(person)" >
                     {{ person.name }}
                 </button >
             </li >
         }
     </ul >
+    @if ( selectedPerson ) {
+        <div >
+            {{ selectedPerson.name }} is selected
+        </div >
+    }

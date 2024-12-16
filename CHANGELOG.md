@@ -16,6 +16,8 @@
 
 - Show a person using person interface :link:[a667841](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/a667841a0dba42c221d97b51f2e7dfc484e6a0af)
 
-- Show several persons on the application
+- Show several persons on the application :link:[9ab6204](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/9ab6204c68e91959b8c3d75fa38a5dfda58c4afb)
     - Create file personsEx.ts
     - Update files content
+
+- Show details for each person when clicking its button
