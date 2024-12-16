@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { PERSONS } from '../personsEx';
 import { Person } from '../../../person';
 import { PersonDetailsComponent } from '../person-details/person-details.component';
+import { PersonService } from '../person.service';
 
 @Component({
   selector: 'app-persons',
@@ -10,10 +10,20 @@ import { PersonDetailsComponent } from '../person-details/person-details.compone
   styleUrl: './persons.component.css'
 })
 export class PersonsComponent {
-  persons = PERSONS;
+  persons: Person [] = [];
   selectedPerson ? : Person;
-
+  
+  constructor ( private personService: PersonService ) {}
+  
   onSelect ( person: Person ) {
     this.selectedPerson = person;
+  }
+  
+  getPersons () {
+    this.persons = this.personService.getPersons() ;
+  }
+  
+  ngOnInit () {
+    this.getPersons () ;
   }
 }

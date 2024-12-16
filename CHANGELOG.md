@@ -22,10 +22,16 @@
 
 - Show details for each person when clicking its button :link:[16e073d](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/16e073d6d396bd301ff19df85336a65d31efcceb)
 
-- Separate persons from their details
+- Separate persons from their details :link:[7160073](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/716007386a822bcabdc3be31a1f6525973650b32)
     - Generate person-details component
     ```
     ng generate component personDetails
     ```
     - Update files content
 
+- Add service to retrieve persons
+    - Generate person service
+    ```
+    ng generate service person
+    ```
+    - Update files content
