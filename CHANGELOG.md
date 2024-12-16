@@ -20,4 +20,12 @@
     - Create file personsEx.ts
     - Update files content
 
-- Show details for each person when clicking its button
+- Show details for each person when clicking its button :link:[16e073d](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/16e073d6d396bd301ff19df85336a65d31efcceb)
+
+- Separate persons from their details
+    - Generate person-details component
+    ```
+    ng generate component personDetails
+    ```
+    - Update files content
+

@@ -8,8 +8,4 @@
             </li >
         }
     </ul >
-    @if ( selectedPerson ) {
-        <div >
-            {{ selectedPerson.name }} is selected
-        </div >
-    }
+    <app-person-details [selectedPerson] = "selectedPerson"></app-person-details>
