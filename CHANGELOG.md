@@ -13,3 +13,9 @@
     ng generate component persons
     ```
     - Update files content
+
+- Show a person using person interface :link:[a667841](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/a667841a0dba42c221d97b51f2e7dfc484e6a0af)
+
+- Show several persons on the application
+    - Create file personsEx.ts
+    - Update files content

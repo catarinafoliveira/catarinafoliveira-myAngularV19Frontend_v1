@@ -1,1 +1,10 @@
-<h2> {{ person.name }} </h2>
+<h2 > Persons </h2 >
+    <ul >
+        @for ( person of persons; track person.name ) {
+            <li >
+                <button type= " button " >
+                    {{ person.name }}
+                </button >
+            </li >
+        }
+    </ul >
