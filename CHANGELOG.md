@@ -29,9 +29,11 @@
     ```
     - Update files content
 
-- Add service to retrieve persons
+- Add service to retrieve persons :link:[0ba664b](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/0ba664b0ccb58ec78e92985df18e0c8bee50bf08)
     - Generate person service
     ```
     ng generate service person
     ```
     - Update files content
+
+- Add routing (for navigation)
