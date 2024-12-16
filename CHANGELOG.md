@@ -7,7 +7,7 @@
     - Empty app.component.html
     - Install boostrap
 
-- Show a person on the application
+- Show a person on the application :link:[fd7d4ec](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/fd7d4ec058054b66b2cf03dda9c6a024159e46ec)
     - Generate person component
     ```
     ng generate component persons
