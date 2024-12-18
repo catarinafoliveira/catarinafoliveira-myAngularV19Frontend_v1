@@ -77,10 +77,19 @@
         ```
     - Update files content
 
-- Frontend: complete Person component
+- Frontend: complete Person component :link:[3d9245a](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/3d9245a16d7412966872a322dcbc23415766465f)
      - Create person model 
      - Create person service
         ```
         ng generate service person
         ```
      - Update files content
+
+- Frontend: complete Driver component
+    - Create driver model
+    - Create driver service
+        ```
+        ng generate service driver
+        ```
+    - Update files content
+    - Rearrange project to have a folder for models ```src/app/models/``` and another for services ```src/app/services/```

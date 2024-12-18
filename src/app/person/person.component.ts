@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NgbModal, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { Person } from '../person';
-import { PersonService } from '../person.service';
-import { MessageService } from '../message.service';
-declare var window: any;
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Person } from '../models/person';
+import { PersonService } from '../services/person.service';
+import { MessageService } from '../services/message.service';
+import { DriverService } from '../services/driver.service';
 
 @Component({
   selector: 'app-persons',
@@ -27,10 +27,11 @@ export class PersonComponent implements OnInit{
   constructor(
     private modalService: NgbModal,
     private personService: PersonService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private driverService: DriverService
   ){}
 
-  // #region generic functionality
+  // #region generic
   ngOnInit(){
     this.getPersons();
   }
@@ -61,7 +62,7 @@ export class PersonComponent implements OnInit{
   }
   // #endregion
 
-  // #region ADD functionality
+  // #region ADD
   toggleAdd(): void {
     this.newPerson = this.reset();
     this.showAddForm = !this.showAddForm;
@@ -71,32 +72,53 @@ export class PersonComponent implements OnInit{
   openAddModal(content: any): void {
     this.openModal(content);
   }
-  
+
   confirmAdd(): void {
-    this.personService.createPerson(this.newPerson).subscribe({
-      next: () => {
-        this.messageService.sendMessage({
-          text: 'Person created successfully.',
-          type: 'alert alert-success'
-        });
-        this.newPerson = this.reset();
-        this.showEditForm = false;
-        this.showAddForm = false;
-        this.isDriver = false;
-        this.getPersons();
-      },
-      error: (err) => {
-        this.messageService.sendMessage({
-          text: 'Error creating person: ' + err.error.error,
-          type: 'alert alert-danger'
-        });
-      }
-    });
     this.modalService.dismissAll();
+    if(this.isDriver){
+      this.driverService.createDriver(this.newPerson).subscribe({
+        next: () => {
+          this.messageService.sendMessage({
+            text: 'Driver created successfully.',
+            type: 'alert alert-success'
+          });
+          this.newPerson = this.reset();
+          this.showEditForm = false;
+          this.showAddForm = false;
+          this.getPersons();
+        },
+        error: (err) => {
+          this.messageService.sendMessage({
+            text: 'Error creating driver: ' + err.error.error,
+            type: 'alert alert-danger'
+          });
+        }
+      });
+    } else {
+      this.personService.createPerson(this.newPerson).subscribe({
+        next: () => {
+          this.messageService.sendMessage({
+            text: 'Person created successfully.',
+            type: 'alert alert-success'
+          });
+          this.newPerson = this.reset();
+          this.showEditForm = false;
+          this.showAddForm = false;
+          this.isDriver = false;
+          this.getPersons();
+        },
+        error: (err) => {
+          this.messageService.sendMessage({
+            text: 'Error creating person: ' + err.error.error,
+            type: 'alert alert-danger'
+          });
+        }
+      });
+    }
   }
   // #endregion
 
-  // #region EDIT functionality
+  // #region EDIT
   toggleEdit(person: Person) {
     this.backupPerson = { ...person }; 
     this.selectedPerson = { ...person }; 
@@ -133,7 +155,7 @@ export class PersonComponent implements OnInit{
 
   // #endregion
 
-  // #region DELETE functionality
+  // #region DELETE
   openDeleteModal(content: any, person: Person) {
     this.confirmationIdCard = '';
     this.selectedPerson = { ...person }; 
