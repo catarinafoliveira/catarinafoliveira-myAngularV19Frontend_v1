@@ -8,9 +8,9 @@
 
 - Show a person on the application :link:[fd7d4ec](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/fd7d4ec058054b66b2cf03dda9c6a024159e46ec)
     - Generate person component
-    ```
-    ng generate component persons
-    ```
+        ```
+        ng generate component persons
+        ```
     - Update files content
 
 - Show a person using person interface :link:[a667841](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/a667841a0dba42c221d97b51f2e7dfc484e6a0af)
@@ -23,16 +23,16 @@
 
 - Separate persons from their details :link:[7160073](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/716007386a822bcabdc3be31a1f6525973650b32)
     - Generate person-details component
-    ```
-    ng generate component personDetails
-    ```
+        ```
+        ng generate component personDetails
+        ```
     - Update files content
 
 - Add service to retrieve persons :link:[0ba664b](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/0ba664b0ccb58ec78e92985df18e0c8bee50bf08)
     - Generate person service
-    ```
-    ng generate service person
-    ```
+        ```
+        ng generate service person
+        ```
     - Update files content
 
 - Add routing (for navigation) :link:[d565358](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/d565358b5883731e5d78e9550d5dece8a2c972eb)
@@ -42,11 +42,12 @@
 
 - Create main application layout :link:[d8bc612](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/d8bc612a27b74a787bb97722e57ebf33ebeffb88)
     - Install boostrap
-    ```
-    npm install bootstrap
-    npm install --save-dev @types/bootstrap
-    npm install @popperjs/core
-    ```
+        ```
+        npm install bootstrap
+        npm install --save-dev @types/bootstrap
+        npm install @popperjs/core
+        npm install @ng-bootstrap/ng-bootstrap
+        ```
     - Remove folders
         - persons and all files
         - person-details and all files
@@ -58,21 +59,28 @@
         - person.service.spec.ts
     
     - Generate home, person, driver, and car components
-    ```
-    ng generate component home
-    ng generate component person
-    ng generate component driver
-    ng generate component car
-    ```
+        ```
+        ng generate component home
+        ng generate component person
+        ng generate component driver
+        ng generate component car
+        ```
     - Update files content
 
     - Add images to ```public/``` folder
 
-- Create and fill message service
+- Create and fill message service :link:[edb4ed2](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/edb4ed24c0a59fbccea2737560e53543cc021d9e)
 
     - Create service
-    ```
-    ng generate service message
-    ```
+        ```
+        ng generate service message
+        ```
     - Update files content
 
+- Frontend: complete Person component
+     - Create person model 
+     - Create person service
+        ```
+        ng generate service person
+        ```
+     - Update files content
