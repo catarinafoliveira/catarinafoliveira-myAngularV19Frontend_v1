@@ -40,7 +40,7 @@
 # Build frontend for the backend application
 :link:[Backend Application](https://github.com/catarinafoliveira/myApi_v1)
 
-- Create main application layout
+- Create main application layout :link:[d8bc612](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/d8bc612a27b74a787bb97722e57ebf33ebeffb88)
     - Install boostrap
     ```
     npm install bootstrap
@@ -67,3 +67,12 @@
     - Update files content
 
     - Add images to ```public/``` folder
+
+- Create and fill message service
+
+    - Create service
+    ```
+    ng generate service message
+    ```
+    - Update files content
+
