@@ -1,6 +1,12 @@
 import { Routes } from '@angular/router';
-import { PersonsComponent } from './persons/persons.component';
+import { CarComponent } from './car/car.component';
+import { DriverComponent } from './driver/driver.component';
+import { HomeComponent } from './home/home.component';
+import { PersonComponent } from './person/person.component';
 
 export const routes: Routes = [
-    { path: 'persons' , component: PersonsComponent } ,
+    {path:'', component: HomeComponent},
+    {path:'persons', component: PersonComponent},
+    {path:'drivers', component: DriverComponent},
+    {path:'cars', component: CarComponent},
 ];

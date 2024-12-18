@@ -5,7 +5,6 @@
     - Update gitignore
     - Create CHANGELOG.md
     - Empty app.component.html
-    - Install boostrap
 
 - Show a person on the application :link:[fd7d4ec](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/fd7d4ec058054b66b2cf03dda9c6a024159e46ec)
     - Generate person component
@@ -36,4 +35,35 @@
     ```
     - Update files content
 
-- Add routing (for navigation)
+- Add routing (for navigation) :link:[d565358](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/d565358b5883731e5d78e9550d5dece8a2c972eb)
+
+# Build frontend for the backend application
+:link:[Backend Application](https://github.com/catarinafoliveira/myApi_v1)
+
+- Create main application layout
+    - Install boostrap
+    ```
+    npm install bootstrap
+    npm install --save-dev @types/bootstrap
+    npm install @popperjs/core
+    ```
+    - Remove folders
+        - persons and all files
+        - person-details and all files
+    
+    - Remove files
+        - person.ts
+        - personEx.ts
+        - person.service.ts
+        - person.service.spec.ts
+    
+    - Generate home, person, driver, and car components
+    ```
+    ng generate component home
+    ng generate component person
+    ng generate component driver
+    ng generate component car
+    ```
+    - Update files content
+
+    - Add images to ```public/``` folder

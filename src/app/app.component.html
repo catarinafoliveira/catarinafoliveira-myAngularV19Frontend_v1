@@ -1,5 +1,31 @@
-<h1 > {{ title }} </h1 >
-    <nav>
-        <a routerLink="/persons">Persons</a>
-    </nav>
-    <router-outlet></router-outlet>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"> <a class="nav-link"routerLink="/"> <img style="
+            margin-left: 10 px;"src="/home.png"> Home</a> </li>
+            <li class="nav-item"> <a class="nav-link"routerLink="/persons"> <img
+            style="margin-left: 10 px;"src="/user.png"> Persons</a> </li>
+            <li class="nav-item"> <a class="nav-link"routerLink="/drivers"> <img
+            style="margin-left: 10 px;"src="/driver.png"> Drivers</a> </li>
+            <li class="nav-item"> <a class="nav-link"routerLink="/cars"> <img
+            style="margin-left: 10 px;"src="/car.png"> Cars</a> </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="container">
+    <router-outlet> </router-outlet>
+</div>
+
+<!-- Footer -->
+<footer class="footer fixed-bottom">
+    <div class="container text-center">
+        @if ( message ) {
+            <div class="{{ message.type }}">
+                {{ message.text }}
+            </div>
+        }
+    </div>
+</footer>
