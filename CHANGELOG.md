@@ -85,7 +85,7 @@
         ```
      - Update files content
 
-- Frontend: complete Driver component
+- Frontend: complete Driver component :link:[1216167](https://github.com/catarinafoliveira/catarinafoliveira-myAngularV19Frontend_v1/commit/1216167fc5b23688a7194a00f19f7e621d6ba5eb)
     - Create driver model
     - Create driver service
         ```
@@ -93,3 +93,11 @@
         ```
     - Update files content
     - Rearrange project to have a folder for models ```src/app/models/``` and another for services ```src/app/services/```
+
+- Frontend: complete Car component
+    - Create car model
+    - Create car service
+        ```
+        ng generate service car
+        ```
+    - Update files content

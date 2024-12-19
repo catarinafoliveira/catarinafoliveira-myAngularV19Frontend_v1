@@ -135,7 +135,6 @@ export class DriverComponent implements OnInit{
   // #endregion
 
   // #region DELETE
-
   openDeleteModal(content: any, driver: Driver): void {
     this.confirmationIdCard = '';
     this.selectedDriver = { ...driver }; 
